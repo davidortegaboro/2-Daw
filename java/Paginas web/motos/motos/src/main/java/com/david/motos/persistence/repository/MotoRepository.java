@@ -9,5 +9,4 @@ public interface MotoRepository {
 
     List<Moto> findAll();
 
-    List<Moto> searchMotoByTeam(Integer id);
 }

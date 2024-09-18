@@ -5,14 +5,7 @@ public class Moto {
     private Integer id;
     private String brand;
     private Integer horses;
-    private Equipo equipo;
 
-    public Moto(Integer id, String brand, Integer horses, Equipo equipo) {
-        this.id = id;
-        this.brand = brand;
-        this.horses = horses;
-        this.equipo = equipo;
-    }
 
     public Moto(Integer id, String brand, Integer horses) {
         this.id = id;
@@ -44,11 +37,5 @@ public class Moto {
         this.horses = horses;
     }
 
-    public Equipo getEquipo() {
-        return equipo;
-    }
 
-    public void setEquipo(Equipo equipo) {
-        this.equipo = equipo;
-    }
 }

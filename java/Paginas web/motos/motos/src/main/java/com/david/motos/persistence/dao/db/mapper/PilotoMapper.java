@@ -1,7 +1,6 @@
 package com.david.motos.persistence.dao.db.mapper;
 
-import com.david.motos.common.container.EquipoContainer;
-import com.david.motos.domain.entity.Equipo;
+
 import com.david.motos.domain.entity.Piloto;
 
 import java.sql.ResultSet;
@@ -16,13 +15,12 @@ public class PilotoMapper {
             return null;
         }
         try{
-            Integer idEquipo = resultSet.getInt("id_equipo");
-            Equipo equipo = EquipoContainer.getEquipoService().findById(idEquipo);
+
         return new Piloto(
                 resultSet.getInt("id_piloto"),
                 resultSet.getString("name"),
-                resultSet.getInt("age"),
-                equipo
+                resultSet.getInt("age")
+
         );
         }catch (SQLException e){
             throw new RuntimeException("Algo ha salido mal" + e.getMessage());

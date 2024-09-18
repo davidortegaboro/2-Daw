@@ -1,5 +1,6 @@
 package com.david.motos.persistence.dao.db.mapper;
 
+import com.david.motos.common.container.PilotoContainer;
 import com.david.motos.domain.entity.Equipo;
 import com.david.motos.domain.entity.Moto;
 import com.david.motos.domain.entity.Piloto;
@@ -19,9 +20,10 @@ public class EquipoMapper {
 
         try{
 
-            List<Piloto> pilotoList = new ArrayList<>();
+            List<Piloto> pilotoList = PilotoContainer.getPilotoDao().
 
             List<Moto> pilotoMoto = new ArrayList<>();
+
 
 
 

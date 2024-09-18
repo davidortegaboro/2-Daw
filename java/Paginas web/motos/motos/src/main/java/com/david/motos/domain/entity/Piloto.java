@@ -6,14 +6,6 @@ public class Piloto {
     private String name;
     private Integer age;
 
-    private Equipo equipo;
-
-    public Piloto(Integer id, String name, Integer age, Equipo equipo) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.equipo = equipo;
-    }
 
     public Integer getId() {
         return id;
@@ -39,23 +31,7 @@ public class Piloto {
         this.age = age;
     }
 
-    public Equipo getEquipo() {
-        return equipo;
-    }
 
-    public void setEquipo(Equipo equipo) {
-        this.equipo = equipo;
-    }
-
-    @Override
-    public String toString() {
-        return "Piloto{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", equipo=" + equipo +
-                '}';
-    }
 
     public Piloto(Integer id, String name, Integer age) {
         this.id = id;
