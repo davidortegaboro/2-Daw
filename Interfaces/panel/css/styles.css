@@ -1,0 +1,14 @@
+@import url("./03_layout/layout.css");
+@import url("./04_components/panel.css");
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
