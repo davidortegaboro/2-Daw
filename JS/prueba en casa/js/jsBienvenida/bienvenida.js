@@ -9,8 +9,5 @@ let mensajeBienvenida = nombreCliente
     ? `<h2>¡Bienvenido, ${nombreCliente} !</h2>`
     : `<h2>¡Bienvenido!</h2>`;
 
-
-
-
 export { nombreCliente, mensajeBienvenida };
 
