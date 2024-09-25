@@ -10,6 +10,6 @@ public class Ejercicio1 {
 
         List<Integer> integers = Arrays.asList(4,6,21,6);
 
-        return integers.stream().reduce(1, (a, b)-> a + b);
+        return integers.stream().reduce(0, (a, b)-> a + b);
     }
 }

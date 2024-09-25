@@ -1,7 +1,6 @@
+import { nombreCliente } from "../../jsBienvenida/bienvenida.js";
 
-import { nombreCliente, nombreLocalStorage } from "../../jsBienvenida/bienvenida.js";
-
-export function funcionGuardarNombre () {
+export function funcionGuardarNombre (nombreCliente) {
     if (nombreCliente){
         let guardarNombre = confirm("¿Desea guardar su nombre?");
             if (guardarNombre){
