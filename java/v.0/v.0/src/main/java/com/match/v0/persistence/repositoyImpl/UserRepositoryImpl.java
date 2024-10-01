@@ -21,11 +21,11 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public Optional<User> findById(Integer id) {
-        return Optional.empty();
+        return userDao.findById(id);
     }
 
     @Override
     public List<User> findAll() {
-        return List.of();
+        return userDao.findAll();
     }
 }
