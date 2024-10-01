@@ -4,12 +4,16 @@ import com.match.v0.domain.entity.User;
 import com.match.v0.persistence.dao.UserDao;
 import com.match.v0.persistence.dao.impl.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
+
 @RequiredArgsConstructor
+@Component
 public class UserDaoImpl implements UserDao {
 
     private final JdbcTemplate jdbcTemplate;
