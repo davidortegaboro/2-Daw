@@ -1,0 +1,5 @@
+@each $value in $padding {
+    .g--padding-#{$value} {
+        padding: #{$value}px;
+    }
+}

@@ -1,0 +1,54 @@
+c-panel{  
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    border: 1px solid;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+
+
+    &__header{
+        display: flex;
+        background: linear-gradient(45deg, #d9ecaa, #e4f551);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        border-bottom: 1px solid;
+
+        &--xl{
+            font-size: 2rem;
+        }
+    }
+
+    &__body{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0.3px;
+        width: 100%;
+        height: 60%;
+        border-bottom: 1px solid;
+
+        &--xl{
+            font-size: 1rem;
+        }
+    }
+
+    &__footer{
+        display: flex;
+        background: linear-gradient(45deg, #d9ecaa, #e4f551);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+    }
+
+
+    &--danger{
+    background: linear-gradient(45deg, #eba3a3, #f22b28); ;
+    }
+
+    &--correct{
+        background: linear-gradient(45deg, #9dd990, #60ef40); ;
+    }
+}

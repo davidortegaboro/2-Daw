@@ -1,0 +1,5 @@
+@each $value in $border {
+    .g--border-#{$value} {
+        border: #{$value}px
+    }
+}

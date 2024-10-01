@@ -1,0 +1,7 @@
+$mapa:(
+    "a": enero,
+    "b": febrero
+);
+ 
+$clave:a;
+$valor:map-get($mapa,$clave);
