@@ -210,6 +210,37 @@
     }
 
 
+    function ordenaNombreAsc() {
+        // Inicializa nombreAlumnos como un array vacío
+        let nombreAlumnos = [];
+
+        // Utiliza forEach para llenar el array con los nombres
+        alumnos.forEach(alumno => {
+            nombreAlumnos.push(alumno.nombre);
+        });
+
+        // Ordena el array de nombres alfabéticamente
+        let nombreAlumnosOrdenados = nombreAlumnos.sort();
+
+        // Muestra el array ordenado en consola
+        console.log(nombreAlumnosOrdenados);
+    }
+
+    function ordenaNombreDesc() {
+        // Inicializa nombreAlumnos como un array vacío
+        let nombreAlumnos = [];
+
+        // Utiliza forEach para llenar el array con los nombres
+        alumnos.forEach(alumno => {
+            nombreAlumnos.push(alumno.nombre);
+        });
+
+        // Ordena el array de nombres alfabéticamente
+        let nombreAlumnosOrdenados = nombreAlumnos.sort().reverse();
+
+        // Muestra el array ordenado en consola
+        console.log(nombreAlumnosOrdenados);
+    }
 
 
 
