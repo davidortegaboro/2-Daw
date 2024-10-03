@@ -131,13 +131,85 @@
     }
 
     function subeUnPunto() {
-
-        alumnos.array.forEach(alumno => {
-            alumno.calificaciones.forEach(calificacion => {
-
-            })
+        alumnos.forEach(alumno => {
+            // Actualiza las calificaciones sumando 1 a cada nota, manteniendo la estructura
+            alumno.calificaciones = alumno.calificaciones.map(calificacion => ({
+                asignatura: calificacion.asignatura,
+                nota: calificacion.nota + 1 // Sumar 1 a la nota
+            }));
         });
     }
+
+    function alumnosCiudad() {
+
+        let nombreCiudad = prompt("Inserte el nombre de una ciudad");
+
+        if (nombreCiudad.trim() !== "") {
+
+            let nombreCiudadFormateado = nombreCiudad.trim();
+
+            let alumnosMismaCiudad = [];
+
+            alumnos.forEach(alumno => {
+                if (alumno.ciudad.toLowerCase() === nombreCiudadFormateado.toLowerCase()) {
+                    alumnosMismaCiudad.push(alumno.nombre);
+                }
+            });
+
+            if (alumnosMismaCiudad.length === 0) {
+                console.log("Ha habido un error, no se ha encontrado ningun alumno con esa ciudad");
+            } else {
+                console.log(alumnosMismaCiudad);
+            }
+        } else {
+            console.log("Inserte un dato valido");
+        }
+    }
+
+    function alumnosCurso() {
+        let cursoAlumno = prompt("Inserte el numero de un curso");
+
+        if (cursoAlumno.trim() === "") {
+            console.log("Inserte un curso, no has escrito ninguno");
+        } else {
+
+            let cursoAlumnoFormateado = cursoAlumno.trim();
+
+            let cursoAlumnosMismoCurso = [];
+
+            let cursoAlumnoDividido;
+
+            alumnos.forEach(alumno => {
+
+                cursoAlumnoDividido = alumno.codigo.split("-");
+
+                if (cursoAlumnoDividido[1] === cursoAlumnoFormateado) {
+                    cursoAlumnosMismoCurso.push(alumno.nombre);
+                }
+            })
+
+            if (cursoAlumnosMismoCurso.length === 0) {
+                console.log("No hay ningun alumno con ese curso");
+            } else {
+                console.log(cursoAlumnosMismoCurso);
+            }
+        }
+    }
+
+    function ordenaEdad() {
+
+        let alumnosOrdenadosPorEdad = alumnos.sort((a, b) => a.edad - b.edad);
+
+        let nombreYCurosAlumnos = [];
+
+        alumnosOrdenadosPorEdad.forEach(alumno => {
+            nombreYCurosAlumnos.push(alumno.nombre, alumno.edad);
+        });
+
+        console.log(nombreYCurosAlumnos);
+    }
+
+
 
 
 
