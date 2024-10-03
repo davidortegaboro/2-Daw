@@ -235,11 +235,49 @@
             nombreAlumnos.push(alumno.nombre);
         });
 
-        // Ordena el array de nombres alfabéticamente
+        // Ordena el array de nombres alfabéticamente y con reverse le da la vuelta
         let nombreAlumnosOrdenados = nombreAlumnos.sort().reverse();
 
         // Muestra el array ordenado en consola
         console.log(nombreAlumnosOrdenados);
+    }
+
+    function borraAlumno() {
+        // Solicitar el nombre del alumno al usuario mediante un cuadro de diálogo
+        let nombreAlumno = prompt("Inserte el nombre del alumno");
+
+        // Formatear el nombre del alumno: convertir a minúsculas y eliminar espacios en blanco
+        let nombreAlumnoFormateado = nombreAlumno.toLowerCase().trim();
+
+        // Buscar el indice del alumno en el array 'alumnos' utilizando el método findIndex
+        let al = alumnos.findIndex(alumno => alumno.nombre.toLowerCase().trim() === nombreAlumnoFormateado);
+
+        if (al >= 0) {
+            alumnos.splice(al, 1);
+        } else {
+            console.log("No se ha encontrado ningun alumno");
+        }
+    }
+
+    function nuevoAlumno() {
+
+        let codigo = prompt("Inserte el codigo del alumno");
+        let nombre = prompt("Inserte el nombre del alumno");
+        let ciudad = prompt("Inserte la ciudad del alumno");
+        let edad = prompt("Inserte la edad del alumno");
+
+        let nuevoAlumno = {
+            codigo: codigo.trim(),
+            nombre: nombre.trim(),
+            ciudad: ciudad.trim(),
+            edad: edad.trim(),
+            calificaciones: []
+        };
+
+        alumnos.push(nuevoAlumno);
+
+        console.log(alumnos);
+
     }
 
 
