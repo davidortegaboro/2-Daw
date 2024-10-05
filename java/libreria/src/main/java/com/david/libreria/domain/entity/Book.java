@@ -1,18 +1,27 @@
 package com.david.libreria.domain.entity;
 
+
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
+import java.math.BigDecimal;
+import java.util.List;
+
 
 @Data
+@NoArgsConstructor
 public class Book {
 
-    private Integer id;
-    private Integer isbn;
-    private String title_es;
-    private String title_en;
-    private String synopsis_es;
-    private String synopsis_en;
-    private double price;
+    private String isbn;
+    private String title;
+    private String synopsis;
+    private BigDecimal price;
+    private float discount;
     private String cover;
     private Publisher publisher;
+    private Category category;
+    private List<Author> authors;
+    private List<Genre> genres;
 
 }
