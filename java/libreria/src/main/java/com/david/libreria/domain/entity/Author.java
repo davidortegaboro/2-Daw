@@ -7,6 +7,7 @@ public class Author {
     private Integer id;
     private String name;
     private String nationality;
-    private String birthYear;
-    private String birthDeath;
+    private String biography;
+    private Integer birthYear;
+    private Integer birthDeath;
 }

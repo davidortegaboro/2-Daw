@@ -14,4 +14,4 @@ VALUES
 (10, 'peter_parker10', 'peter.parker10@example.com', 'password111');
 
 
-select user.* from user where id = 1;
+select user.* from user;
