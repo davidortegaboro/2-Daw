@@ -3,11 +3,13 @@ package com.david.libreria.persistence.repository;
 import com.david.libreria.domain.entity.Author;
 import com.david.libreria.domain.repository.AuthorRepository;
 import com.david.libreria.persistence.dao.AuthorDao;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@RequiredArgsConstructor
 @Repository
 public class AuthorRepositoryImpl implements AuthorRepository {
 
@@ -19,6 +21,6 @@ public class AuthorRepositoryImpl implements AuthorRepository {
 
     @Override
     public List<Author> getByIsbnBook(String isbn) {
-        return List.of();
+         return authorDao.getByIsbnBook(isbn);
     }
 }

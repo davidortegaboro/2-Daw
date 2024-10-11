@@ -9,6 +9,8 @@ import java.sql.SQLException;
 
 public class BookRowMapper implements CustomRowMapper<Book> {
 
+    private final CategoryRowMapper categoryRowMapper = new CategoryRowMapper();
+    private final PublisherRowMapper publisherRowMapper = new PublisherRowMapper();
 
     @Override
     public Book mapRow(ResultSet rs, int rowNum) throws SQLException {

@@ -33,9 +33,9 @@ public class BookDaoImpl implements BookDao {
 
         String sql = """
                 SELECT * FROM books
-                LEFT JOIN categories ON books.category_id = categories.id
-                LEFT JOIN publishers ON books.publisher_id = publishers.id
-                WHERE books.isbn = ?
+                 LEFT JOIN categories ON books.category_id = categories.id
+                 LEFT JOIN publishers ON books.publisher_id = publishers.id
+                 WHERE books.isbn = ?
            """;
         try {
             Book book = jdbcTemplate.queryForObject(sql, new BookRowMapper(), isbn);

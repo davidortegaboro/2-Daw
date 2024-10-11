@@ -1,5 +1,7 @@
 package com.david.libreria.controller.model.book;
 
-public class BookColletion {
+public record BookColletion
+        (String isbn,
+         String title){
 
 }

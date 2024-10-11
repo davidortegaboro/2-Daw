@@ -18,7 +18,7 @@ public class AuthorDaoImpl implements AuthorDao {
     @Override
     public List<Author> getByIsbnBook(String isbn) {
         String sql = """
-            ELECT authors.* FROM authors
+            SELECT authors.* FROM authors
             JOIN books_authors ON authors.id = books_authors.author_id
             JOIN books ON books_authors.book_id = books.id
             AND books.isbn = ?

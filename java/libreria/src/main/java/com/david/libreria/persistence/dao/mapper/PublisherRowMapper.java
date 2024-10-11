@@ -13,7 +13,7 @@ public class PublisherRowMapper implements RowMapper<Publisher> {
         Publisher publisher = new Publisher();
 
         publisher.setId(rs.getInt("id"));
-        publisher.setName(rs.getNString("name"));
+        publisher.setName(rs.getNString("name_es"));
         publisher.setSlug(rs.getNString("slug"));
 
         return publisher;
