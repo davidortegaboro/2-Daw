@@ -1,3 +1,229 @@
+:root {
+  --border-1: 1px;
+  --border-2: 2px;
+  --border-3: 3px;
+  --border-4: 4px;
+  --border-6: 6px;
+  --border-8: 8px;
+  --border-12: 12px;
+  --border-24: 24px;
+  --border-32: 32px;
+  --border-64: 64px;
+  --border-radius-5: 5px;
+  --border-radius-10: 10px;
+  --border-radius-20: 20px;
+  --border-radius-30: 30px;
+  --border-radius-40: 40px;
+  --border-radius-50: 50px;
+  --border-radius-60: 60px;
+  --color-blue-10: #010519;
+  --color-blue-20: #010A50;
+  --color-blue-30: #010C8E;
+  --color-blue-40: #0007C7;
+  --color-blue-50: #0000FF;
+  --color-blue-60: #4238FF;
+  --color-blue-70: #8176FE;
+  --color-blue-80: #B9AFFE;
+  --color-blue-90: #EAE6FE;
+  --color-orange-10: #190C01;
+  --color-orange-20: #502B01;
+  --color-orange-30: #8E5101;
+  --color-orange-40: #C77B00;
+  --color-orange-50: #FFA600;
+  --color-orange-60: #FFC338;
+  --color-orange-70: #FEDA76;
+  --color-orange-80: #FEEDAF;
+  --color-orange-90: #FEFAE6;
+  --color-yellow-10: #191501;
+  --color-yellow-20: #504701;
+  --color-yellow-30: #8E8201;
+  --color-yellow-40: #C7C000;
+  --color-yellow-50: #FFFF00;
+  --color-yellow-60: #F5FF38;
+  --color-yellow-70: #F3FE76;
+  --color-yellow-80: #F3FEAF;
+  --color-yellow-90: #FAFEE6;
+  --color-red-10: #190501;
+  --color-red-20: #500A01;
+  --color-red-30: #8E0C01;
+  --color-red-40: #C70700;
+  --color-red-50: #FF0000;
+  --color-red-60: #FF4238;
+  --color-red-70: #FE8176;
+  --color-red-80: #FEB9AF;
+  --color-red-90: #FEEAE6;
+  --color-purple-10: #150119;
+  --color-purple-20: #2C0132;
+  --color-purple-30: #46004C;
+  --color-purple-40: #630066;
+  --color-purple-50: #80007F;
+  --color-purple-60: #990091;
+  --color-purple-70: #B201A3;
+  --color-purple-80: #C903AF;
+  --color-purple-90: #E006BB;
+  --color-green-10: #051901;
+  --color-green-20: #073201;
+  --color-green-30: #074C00;
+  --color-green-40: #036600;
+  --color-green-50: #008000;
+  --color-green-60: #009908;
+  --color-green-70: #01B210;
+  --color-green-80: #03C91D;
+  --color-green-90: #06E02A;
+  --color-grey-10: #0D0D0D;
+  --color-grey-20: #292929;
+  --color-grey-30: #474747;
+  --color-grey-40: #636363;
+  --color-grey-50: #808080;
+  --color-grey-60: #9C9C9C;
+  --color-grey-70: #BABABA;
+  --color-grey-80: #D6D6D6;
+  --color-grey-90: #F2F2F2;
+  --color-brown-10: #190501;
+  --color-brown-20: #400E07;
+  --color-brown-30: #631913;
+  --color-brown-40: #832320;
+  --color-brown-50: #A62B2B;
+  --color-brown-60: #CD3A32;
+  --color-brown-70: #DE5B4F;
+  --color-brown-80: #EE7E6D;
+  --color-brown-90: #FC9F8D;
+  --color-pink-10: #FC88AE;
+  --color-pink-20: #FD96B3;
+  --color-pink-30: #FFA4BA;
+  --color-pink-40: #FFB3C2;
+  --color-pink-50: #FFC2CC;
+  --color-pink-60: #FFD1D6;
+  --color-pink-70: #FFE1E3;
+  --color-pink-80: #FFF0F0;
+  --color-pink-90: #FFFFFF;
+  --background-color-blue-10: #010519;
+  --background-color-blue-20: #010A50;
+  --background-color-blue-30: #010C8E;
+  --background-color-blue-40: #0007C7;
+  --background-color-blue-50: #0000FF;
+  --background-color-blue-60: #4238FF;
+  --background-color-blue-70: #8176FE;
+  --background-color-blue-80: #B9AFFE;
+  --background-color-blue-90: #EAE6FE;
+  --background-color-orange-10: #190C01;
+  --background-color-orange-20: #502B01;
+  --background-color-orange-30: #8E5101;
+  --background-color-orange-40: #C77B00;
+  --background-color-orange-50: #FFA600;
+  --background-color-orange-60: #FFC338;
+  --background-color-orange-70: #FEDA76;
+  --background-color-orange-80: #FEEDAF;
+  --background-color-orange-90: #FEFAE6;
+  --background-color-yellow-10: #191501;
+  --background-color-yellow-20: #504701;
+  --background-color-yellow-30: #8E8201;
+  --background-color-yellow-40: #C7C000;
+  --background-color-yellow-50: #FFFF00;
+  --background-color-yellow-60: #F5FF38;
+  --background-color-yellow-70: #F3FE76;
+  --background-color-yellow-80: #F3FEAF;
+  --background-color-yellow-90: #FAFEE6;
+  --background-color-red-10: #190501;
+  --background-color-red-20: #500A01;
+  --background-color-red-30: #8E0C01;
+  --background-color-red-40: #C70700;
+  --background-color-red-50: #FF0000;
+  --background-color-red-60: #FF4238;
+  --background-color-red-70: #FE8176;
+  --background-color-red-80: #FEB9AF;
+  --background-color-red-90: #FEEAE6;
+  --background-color-purple-10: #150119;
+  --background-color-purple-20: #2C0132;
+  --background-color-purple-30: #46004C;
+  --background-color-purple-40: #630066;
+  --background-color-purple-50: #80007F;
+  --background-color-purple-60: #990091;
+  --background-color-purple-70: #B201A3;
+  --background-color-purple-80: #C903AF;
+  --background-color-purple-90: #E006BB;
+  --background-color-green-10: #051901;
+  --background-color-green-20: #073201;
+  --background-color-green-30: #074C00;
+  --background-color-green-40: #036600;
+  --background-color-green-50: #008000;
+  --background-color-green-60: #009908;
+  --background-color-green-70: #01B210;
+  --background-color-green-80: #03C91D;
+  --background-color-green-90: #06E02A;
+  --background-color-grey-10: #0D0D0D;
+  --background-color-grey-20: #292929;
+  --background-color-grey-30: #474747;
+  --background-color-grey-40: #636363;
+  --background-color-grey-50: #808080;
+  --background-color-grey-60: #9C9C9C;
+  --background-color-grey-70: #BABABA;
+  --background-color-grey-80: #D6D6D6;
+  --background-color-grey-90: #F2F2F2;
+  --background-color-brown-10: #190501;
+  --background-color-brown-20: #400E07;
+  --background-color-brown-30: #631913;
+  --background-color-brown-40: #832320;
+  --background-color-brown-50: #A62B2B;
+  --background-color-brown-60: #CD3A32;
+  --background-color-brown-70: #DE5B4F;
+  --background-color-brown-80: #EE7E6D;
+  --background-color-brown-90: #FC9F8D;
+  --background-color-pink-10: #FC88AE;
+  --background-color-pink-20: #FD96B3;
+  --background-color-pink-30: #FFA4BA;
+  --background-color-pink-40: #FFB3C2;
+  --background-color-pink-50: #FFC2CC;
+  --background-color-pink-60: #FFD1D6;
+  --background-color-pink-70: #FFE1E3;
+  --background-color-pink-80: #FFF0F0;
+  --background-color-pink-90: #FFFFFF;
+  --font-body: Arial, sans-serif;
+  --font-heading: Georgia, serif;
+  --font-monospace: 'Courier New', monospace;
+  --font-secondary: 'Helvetica Neue', sans-serif;
+  --font-display: 'Impact', sans-serif;
+  --font-cursive: 'Comic Sans MS', cursive;
+  --font-size-1: 1px;
+  --font-size-2: 2px;
+  --font-size-3: 3px;
+  --font-size-4: 4px;
+  --font-size-6: 6px;
+  --font-size-8: 8px;
+  --font-size-12: 12px;
+  --font-size-24: 24px;
+  --font-size-32: 32px;
+  --font-size-64: 64px;
+  --margin-1: 1px;
+  --margin-2: 2px;
+  --margin-3: 3px;
+  --margin-4: 4px;
+  --margin-6: 6px;
+  --margin-8: 8px;
+  --margin-12: 12px;
+  --margin-24: 24px;
+  --margin-32: 32px;
+  --margin-64: 64px;
+  --padding-1: 1px;
+  --padding-2: 2px;
+  --padding-3: 3px;
+  --padding-4: 4px;
+  --padding-6: 6px;
+  --padding-8: 8px;
+  --padding-12: 12px;
+  --padding-24: 24px;
+  --padding-32: 32px;
+  --padding-64: 64px;
+  --z-index-1: 1;
+  --z-index-2: 2;
+  --z-index-3: 3;
+  --z-index-4: 4;
+  --z-index-5: 5;
+  --z-index-6: 6;
+  --z-index-7: 7;
+  --z-index-8: 8;
+}
+
 .l-flex {
   display: flex;
 }
@@ -1156,6 +1382,30 @@
   color: "#FFFFFF";
 }
 
+.g--font-body {
+  font: Arial, sans-serif;
+}
+
+.g--font-heading {
+  font: Georgia, serif;
+}
+
+.g--font-monospace {
+  font: 'Courier New', monospace;
+}
+
+.g--font-secondary {
+  font: 'Helvetica Neue', sans-serif;
+}
+
+.g--font-display {
+  font: 'Impact', sans-serif;
+}
+
+.g--font-cursive {
+  font: 'Comic Sans MS', cursive;
+}
+
 .g--margin-1 {
   margin: 1px;
 }
@@ -1274,6 +1524,38 @@
 
 .g--font-size-64 {
   font-size: 64px;
+}
+
+.g--z-index-1 {
+  z-index: 1px;
+}
+
+.g--z-index-2 {
+  z-index: 2px;
+}
+
+.g--z-index-3 {
+  z-index: 3px;
+}
+
+.g--z-index-4 {
+  z-index: 4px;
+}
+
+.g--z-index-5 {
+  z-index: 5px;
+}
+
+.g--z-index-6 {
+  z-index: 6px;
+}
+
+.g--z-index-7 {
+  z-index: 7px;
+}
+
+.g--z-index-8 {
+  z-index: 8px;
 }
 
 /*# sourceMappingURL=styles.css.map */
