@@ -1,5 +1,5 @@
-@each $value in $border-radius {
-    .g--border-radius-#{$value} {
-        border-radius: #{$value}px
+@each $name, $value in $border-radius {
+    .g--border-radius-#{$name} {
+        border-radius: var(--border-radius-#{$name})
     }
 }

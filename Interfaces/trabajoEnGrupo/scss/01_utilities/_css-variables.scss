@@ -1,10 +1,10 @@
 :root {
-    @each $b in $border {
-        --border-#{$b}: #{$b}px;
+    @each $name, $value in $borders {
+        --border-#{$name}: #{$value}px;
     }
 
-    @each $b in $border-radius {
-        --border-radius-#{$b}: #{$b}px;
+    @each $name, $value in $border-radius {
+        --border-radius-#{$name}: #{$value}px;
     }
 
     @each $name, $code in $colors {
@@ -16,29 +16,20 @@
         }
     }
 
-    @each $name, $code in $colors {
-        $cont : 10;
-
-        @each $c in $code {
-            --background-color-#{$name}-#{$cont}: #{$c};
-            $cont: $cont+10;
-        }
-    }
-
     @each $name, $value in $fonts {
         --font-#{$name}: #{$value};
     }
 
-    @each $f in $font-size {
-        --font-size-#{$f}: #{$f}px;
+    @each $name, $value in $font-size {
+        --font-size-#{$name}: #{$value}px;
     }
 
-    @each $m in $margin {
-        --margin-#{$m}: #{$m}px;
+    @each $name, $value in $margin {
+        --margin-#{$name}: #{$value}px;
     }
 
-    @each $p in $padding {
-        --padding-#{$p}: #{$p}px;
+    @each $name, $value in $padding {
+        --padding-#{$name}: #{$value}px;
     }
 
     @each $z in $index {
