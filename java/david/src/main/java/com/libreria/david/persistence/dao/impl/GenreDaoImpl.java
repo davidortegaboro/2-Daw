@@ -18,8 +18,8 @@ public class GenreDaoImpl implements GenreDao {
     public List<Genre> getByIsbnBook(String isbn) {
 
         String sql = """
-                select * from genrequeries
-                inner join books_genres on genrequeries.id = books_genres.genre_id
+                select * from genres
+                inner join books_genres on genres.id = books_genres.genre_id
                 inner join books on books_genres.book_id = books.id
                 where books.isbn = ?;
                 """;
