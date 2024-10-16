@@ -1,4 +1,5 @@
-package com.libreria.david.common.htpp_errors;
+package com.libreria.david.common.exception;
+import com.libreria.david.common.error.ErrorMessage;
 import com.libreria.david.domain.exception.ResourceNotFoundException;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;

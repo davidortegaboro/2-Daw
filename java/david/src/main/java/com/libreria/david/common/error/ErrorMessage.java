@@ -1,4 +1,4 @@
-package com.libreria.david.common.htpp_errors;
+package com.libreria.david.common.error;
 import lombok.Getter;
 import lombok.ToString;
 
