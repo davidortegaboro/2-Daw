@@ -1,7 +1,8 @@
 import { listaArticulos } from "./datos.js";
-
+import { Carrito } from "./carrito.js";
 let criterios = ["Sin ordenar", "Ascendente por precio", "Descendente por precio"]
 
+let carrito = new Carrito(1);
 
 function creaListaCriterios() {
 	//Guarda el select del HTML en selectProductos
@@ -62,7 +63,7 @@ function pintaArticulos(orden) {
                     <p class="card-text text-center">${a.precio}$</p>
                     </b>
                 </div>
-                <button id="m1" class="btn-success">comprar</button>
+                <button id="m1" id="addArticle" class="btn-success">comprar</button>
             </div>
         </div>`;
 	});
@@ -74,23 +75,47 @@ function pintaArticulos(orden) {
 
 
 
-function ponArticuloEnCarrito() {
+function ponArticuloEnCarrito(Carrito) {
+	carrito.anyadeArticulo();
 
 }
 
 
-function verCarro() {
+function verCarro(Carrito) {
 
+	carrito.verCarrito();
+
+}
+
+function cerrarCarro() {
+
+	let dialogo = document.getElementById("miDialogo");
+
+	dialogo.close();
 }
 
 function efectuaPedido() {
+
 
 }
 
 
 window.onload = () => {
 	pintaArticulos(0);
+
 	creaListaCriterios();
+
+	let carritoListener = document.getElementById("imgCart");
+	carritoListener.addEventListener("click", function () { verCarro(carrito) });
+
+	let cerrarDialogo = document.getElementById("btnCierraDialog");
+	cerrarDialogo.addEventListener("click", cerrarCarro);
+
+	let efectuaPedido = document.getElementById("btnEfectuaPedido");
+	efectuaPedido.addEventListener("click", efectuaPedido);
+
+	let addArticle = document.getElementById("addArticle");
+	addArticle.addEventListener("click", ponArticuloEnCarrito);
 
 }
 
