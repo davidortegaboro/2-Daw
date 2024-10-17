@@ -51,7 +51,7 @@ function pintaArticulos(orden) {
 	}
 
 	// Ahora pintamos los artículos de opcionLista
-	opcionLista.forEach(a => {
+	opcionLista.forEach((a, index) => {
 		innerArticulos += `
         <div class="col">
             <div class="card">
@@ -63,20 +63,28 @@ function pintaArticulos(orden) {
                     <p class="card-text text-center">${a.precio}$</p>
                     </b>
                 </div>
-                <button id="m1" id="addArticle" class="btn-success">comprar</button>
+                <button id="addArticle-${index}" class="btn-success">comprar</button>
             </div>
         </div>`;
 	});
 
 	// Asignamos el HTML generado al contenedor de artículos
 	contenedorArticulos.innerHTML = innerArticulos;
+
+	//No entienes esto.
+	setTimeout(() => {
+		opcionLista.forEach((a, index) => {
+			document.querySelector(`#addArticle-${index}`).addEventListener('click', function () {
+				// Almacena el artículo en una lista o en el localStorage
+				ponArticuloEnCarrito(a);
+			});
+		});
+	}, 0);
+
 }
 
-
-
-
-function ponArticuloEnCarrito(Carrito) {
-	carrito.anyadeArticulo();
+function ponArticuloEnCarrito(articulo) {
+	carrito.anyadeArticulo(articulo);
 
 }
 
@@ -114,8 +122,7 @@ window.onload = () => {
 	let efectuaPedido = document.getElementById("btnEfectuaPedido");
 	efectuaPedido.addEventListener("click", efectuaPedido);
 
-	let addArticle = document.getElementById("addArticle");
-	addArticle.addEventListener("click", ponArticuloEnCarrito);
+
 
 }
 

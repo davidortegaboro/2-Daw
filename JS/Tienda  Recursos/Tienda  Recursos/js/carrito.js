@@ -1,3 +1,5 @@
+import { listaArticulos } from "./datos.js";
+
 export class Carrito {
 
 	_id;
@@ -11,6 +13,7 @@ export class Carrito {
 
 	anyadeArticulo(articulo) {
 
+		listaArticulos.push(articulo);
 
 	}
 
@@ -36,6 +39,20 @@ export class Carrito {
 		innerIdPedido += `<h3>${pedido.id}</h3>`
 		let idPedido = document.getElementById("idPedido");
 		idPedido.innerHTML = innerIdPedido;
+
+		let dialogoContent = document.getElementById("dialogContent");
+		let innerArticulos = ``;
+
+		if (listaArticulos.length === 0) {
+			innerArticulos += `<p>La lista de Articulos esta vacia</p>`
+			dialogoContent.innerHTML = innerArticulos;
+
+		} else {
+			listaArticulos.forEach(a => {
+				//Ahora hay que pintar los articulos
+				innerArticulos += ``
+			})
+		}
 
 
 	}
