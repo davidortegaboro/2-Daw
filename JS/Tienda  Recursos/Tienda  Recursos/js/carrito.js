@@ -25,6 +25,13 @@ export class Carrito {
 	}
 
 	modificaUnidades(codigo, n) {
+
+		if (n === "add") {
+			let indexArticulo = this.#listaAriculos.findIndex(articulo => articulo.codigo === codigo);
+			this.#listaAriculos[indexArticulo].unidades + 1;
+		} else {
+
+		}
 	}
 
 	verCarrito() {
@@ -54,7 +61,7 @@ export class Carrito {
 		} else {
 			innerArticulos += `<table class="table table-striped">
 			<th>
-				<td></td>
+				
 				<td>nombre</td>
 				<td>descripcion</td>
 				<td>precio</td>
@@ -66,22 +73,32 @@ export class Carrito {
 
 				innerArticulos +=
 
-					<tr>
-						<td><img>${a.codigo}.jpg</img></td>
+					`<tr>
+
+						<td><img width="35px" src="assets/${a.codigo}.jpg"></img></td>
 						<td>${a.nombre}</td>
 						<td>${a.descripcion}</td>
 						<td>${a.precio}</td>
-						<td>${a.total}</td>
+						<td>${a.total}$</td>
 						<td>
-							<button class="btn btn-primary"></button>
-							<button class="btn btn-warning"></button>
-							<button class="btn btn-danger"></button>
+							<button value="${a.codigo}" id="buttonAdd" class="btn btn-primary">+</button>
+							<button value="${a.codigo}" id="buttonDrop"class="btn btn-warning">-</button>
+							<button value="${a.codigo}" id="buttonDropAll" class="btn btn-danger">Borrar</button>
 						</td>
-					</tr>
+					</tr>`
 
 			})
 		}
 
+		dialogoContent.innerHTML = innerArticulos;
+
+		let butonAdd = document.getElementById("buttonAdd");
+		let buttonDrop = document.getElementById("buttonDrop");
+		let buttonDropAll = document.getElementById("buttonDropAll");
+
+		butonAdd.addEventListener("click", function () { modificaUnidades(this.value, "add") });
+		butonDrop.addEventListener("click", function () { modificaUnidades(this.value, "drop") });
+		butonDropAll.addEventListener("click", function () { borraArticulo(this.value) });
 
 	}
 }
