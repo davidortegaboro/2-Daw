@@ -2,18 +2,22 @@ import { listaArticulos } from "./datos.js";
 
 export class Carrito {
 
-	_id;
-	_listaAriculos;
+	#id;
+	#listaAriculos;
 
 	constructor(id) {
-		this.id = id;
-		this._listaAriculos = [];
+		this.#id = id;
+		this.#listaAriculos = [];
 
 	}
 
 	anyadeArticulo(articulo) {
 
-		listaArticulos.push(articulo);
+		this.#listaAriculos.push({
+			...articulo,
+			unidades: 1,
+			total: articulo.precio
+		});
 
 	}
 
@@ -43,14 +47,38 @@ export class Carrito {
 		let dialogoContent = document.getElementById("dialogContent");
 		let innerArticulos = ``;
 
-		if (listaArticulos.length === 0) {
+		if (this.#listaAriculos.length === 0) {
 			innerArticulos += `<p>La lista de Articulos esta vacia</p>`
 			dialogoContent.innerHTML = innerArticulos;
 
 		} else {
-			listaArticulos.forEach(a => {
+			innerArticulos += `<table class="table table-striped">
+			<th>
+				<td></td>
+				<td>nombre</td>
+				<td>descripcion</td>
+				<td>precio</td>
+				<td>total</td>
+				<td></td>
+			</th>`;
+			this.#listaAriculos.forEach(a => {
 				//Ahora hay que pintar los articulos
-				innerArticulos += ``
+
+				innerArticulos +=
+
+					<tr>
+						<td><img>${a.codigo}.jpg</img></td>
+						<td>${a.nombre}</td>
+						<td>${a.descripcion}</td>
+						<td>${a.precio}</td>
+						<td>${a.total}</td>
+						<td>
+							<button class="btn btn-primary"></button>
+							<button class="btn btn-warning"></button>
+							<button class="btn btn-danger"></button>
+						</td>
+					</tr>
+
 			})
 		}
 
