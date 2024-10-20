@@ -1,8 +1,6 @@
 package com.libreria.david.controller.admin.webModel.book;
 
-import com.libreria.david.controller.admin.webModel.book.BookCollection;
-import com.libreria.david.controller.admin.webModel.book.BookDetails;
-import com.libreria.david.domain.model.Book;
+import com.libreria.david.domain.admin.model.Book;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

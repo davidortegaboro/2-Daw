@@ -4,6 +4,7 @@ import com.libreria.david.controller.user.webModel.book.BookCollection;
 import com.libreria.david.controller.user.webModel.book.BookDetails;
 import com.libreria.david.controller.user.webModel.book.BookMapper;
 import com.libreria.david.domain.service.BookService;
+import com.libreria.david.domain.user.service.BookUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,21 +19,21 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BookUserController {
 
-    private BookService bookService;
+    private BookUserService bookUserService;
     @Autowired
-    public BookUserController(BookService bookService) {
-        this.bookService = bookService;
+    public BookUserController(BookUserService bookUserService) {
+        this.bookUserService = bookUserService;
     }
 
     @GetMapping("/api/books")
     public ResponseEntity<List<BookCollection>> findAll(){
-        List<BookCollection> bookCollectionList = bookService.findAll().stream().map(BookMapper.INSTANCE::toBookCollection).toList();
+        List<BookCollection> bookCollectionList = bookUserService.getAll().stream().map(BookMapper.INSTANCE::toBookCollection).toList();
         return new ResponseEntity<>(bookCollectionList, HttpStatus.OK);
     }
 
     @GetMapping("/api/books/{isbn}")
     public ResponseEntity<BookDetails> findByIsbn(@PathVariable String isbn){
-        BookDetails bookDetails = BookMapper.INSTANCE.toBookDetails(bookService.findByIsbn(isbn));
+        BookDetails bookDetails = BookMapper.INSTANCE.toBookDetails(bookUserService.findByIsbn(isbn));
         return new ResponseEntity<>(bookDetails, HttpStatus.OK);
     }
 

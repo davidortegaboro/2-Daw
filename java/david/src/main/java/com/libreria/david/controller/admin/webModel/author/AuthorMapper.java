@@ -1,8 +1,7 @@
 package com.libreria.david.controller.admin.webModel.author;
 
-import com.libreria.david.controller.admin.webModel.author.AuthorCollection;
-import com.libreria.david.controller.admin.webModel.author.AuthorDetails;
-import com.libreria.david.domain.model.Author;
+
+import com.libreria.david.domain.admin.model.Author;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

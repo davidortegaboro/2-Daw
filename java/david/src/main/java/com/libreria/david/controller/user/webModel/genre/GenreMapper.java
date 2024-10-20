@@ -1,6 +1,6 @@
 package com.libreria.david.controller.user.webModel.genre;
 
-import com.libreria.david.domain.model.Genre;
+import com.libreria.david.domain.user.model.Genre;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

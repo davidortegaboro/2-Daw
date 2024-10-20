@@ -1,7 +1,7 @@
 package com.libreria.david.controller.admin.webModel.categorie;
 
 
-import com.libreria.david.domain.model.Categorie;
+import com.libreria.david.domain.admin.model.Categorie;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

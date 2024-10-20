@@ -1,8 +1,7 @@
 package com.libreria.david.controller.admin.webModel.genre;
 
-import com.libreria.david.controller.admin.webModel.genre.GenreCollection;
-import com.libreria.david.controller.admin.webModel.genre.GenreDetails;
-import com.libreria.david.domain.model.Genre;
+
+import com.libreria.david.domain.admin.model.Genre;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

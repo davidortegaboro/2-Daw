@@ -1,6 +1,6 @@
 package com.libreria.david.controller.user.webModel.book;
 
-import com.libreria.david.domain.model.Book;
+import com.libreria.david.domain.user.model.Book;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
