@@ -112,6 +112,21 @@
   --padding-m: 6px;
   --padding-l: 12px;
   --padding-xl: 20px;
+  --width-xs: 1px;
+  --width-s: 2px;
+  --width-m: 6px;
+  --width-l: 12px;
+  --width-xl: 20px;
+  --width-10: 10%;
+  --width-20: 20%;
+  --width-30: 30%;
+  --width-40: 40%;
+  --width-50: 50%;
+  --width-60: 60%;
+  --width-70: 70%;
+  --width-80: 80%;
+  --width-90: 90%;
+  --width-100: 100%;
   --z-index-1: 1;
   --z-index-2: 2;
   --z-index-3: 3;
@@ -124,6 +139,7 @@
 
 .l-flex {
   display: flex;
+  gap: 16px;
 }
 .l-flex--horizontal-reverse {
   flex-direction: row-reverse;
@@ -171,6 +187,9 @@
 .l-grid--cols-4 {
   grid-template-columns: repeat(4, 1fr);
 }
+.l-grid--cols-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
 .l-grid--cols-auto {
   grid-template-columns: auto;
 }
@@ -196,46 +215,46 @@
   gap: 32px;
 }
 .l-grid--justify-start {
-  justify-content: start;
+  justify-items: start;
 }
 .l-grid--justify-center {
-  justify-content: center;
+  justify-items: center;
 }
 .l-grid--justify-end {
-  justify-content: end;
+  justify-items: end;
 }
 .l-grid--justify-stretch {
-  justify-content: stretch;
+  justify-items: stretch;
 }
 .l-grid--justify-space-between {
-  justify-content: space-between;
+  justify-items: space-between;
 }
 .l-grid--justify-space-around {
-  justify-content: space-around;
+  justify-items: space-around;
 }
 .l-grid--justify-space-evenly {
-  justify-content: space-evenly;
+  justify-items: space-evenly;
 }
 .l-grid--align-start {
-  align-content: start;
+  align-items: start;
 }
 .l-grid--align-center {
-  align-content: center;
+  align-items: center;
 }
 .l-grid--align-end {
-  align-content: end;
+  align-items: end;
 }
 .l-grid--align-stretch {
-  align-content: stretch;
+  align-items: stretch;
 }
 .l-grid--align-space-between {
-  align-content: space-between;
+  align-items: space-between;
 }
 .l-grid--align-space-around {
-  align-content: space-around;
+  align-items: space-around;
 }
 .l-grid--align-space-evenly {
-  align-content: space-evenly;
+  align-items: space-evenly;
 }
 .l-grid--align-items-start {
   align-items: start;
@@ -262,7 +281,7 @@
   justify-items: stretch;
 }
 .l-grid--areas {
-  grid-template-areas: "header header" "sidebar content" "footer footer";
+  grid-template-areas: "header header" "sidebar items" "footer footer";
 }
 .l-grid--areas-none {
   grid-template-areas: none;
@@ -1341,20 +1360,100 @@
   margin: var(--margin-xs);
 }
 
+.g--margin-top-xs {
+  margin-top: var(--margin-xs);
+}
+
+.g--margin-bottom-xs {
+  margin-bottom: var(--margin-xs);
+}
+
+.g--margin-right-xs {
+  margin-right: var(--margin-xs);
+}
+
+.g--margin-left-xs {
+  margin-left: var(--margin-xs);
+}
+
 .g--margin-s {
   margin: var(--margin-s);
+}
+
+.g--margin-top-s {
+  margin-top: var(--margin-s);
+}
+
+.g--margin-bottom-s {
+  margin-bottom: var(--margin-s);
+}
+
+.g--margin-right-s {
+  margin-right: var(--margin-s);
+}
+
+.g--margin-left-s {
+  margin-left: var(--margin-s);
 }
 
 .g--margin-m {
   margin: var(--margin-m);
 }
 
+.g--margin-top-m {
+  margin-top: var(--margin-m);
+}
+
+.g--margin-bottom-m {
+  margin-bottom: var(--margin-m);
+}
+
+.g--margin-right-m {
+  margin-right: var(--margin-m);
+}
+
+.g--margin-left-m {
+  margin-left: var(--margin-m);
+}
+
 .g--margin-l {
   margin: var(--margin-l);
 }
 
+.g--margin-top-l {
+  margin-top: var(--margin-l);
+}
+
+.g--margin-bottom-l {
+  margin-bottom: var(--margin-l);
+}
+
+.g--margin-right-l {
+  margin-right: var(--margin-l);
+}
+
+.g--margin-left-l {
+  margin-left: var(--margin-l);
+}
+
 .g--margin-xl {
   margin: var(--margin-xl);
+}
+
+.g--margin-top-xl {
+  margin-top: var(--margin-xl);
+}
+
+.g--margin-bottom-xl {
+  margin-bottom: var(--margin-xl);
+}
+
+.g--margin-right-xl {
+  margin-right: var(--margin-xl);
+}
+
+.g--margin-left-xl {
+  margin-left: var(--margin-xl);
 }
 
 .g--no-text-decoration {
@@ -1379,6 +1478,66 @@
 
 .g--padding-xl {
   padding: var(--padding-xl);
+}
+
+.g--width-xs {
+  width: var(--width-xs);
+}
+
+.g--width-s {
+  width: var(--width-s);
+}
+
+.g--width-m {
+  width: var(--width-m);
+}
+
+.g--width-l {
+  width: var(--width-l);
+}
+
+.g--width-xl {
+  width: var(--width-xl);
+}
+
+.g--width-10 {
+  width: var(--width-10);
+}
+
+.g--width-20 {
+  width: var(--width-20);
+}
+
+.g--width-30 {
+  width: var(--width-30);
+}
+
+.g--width-40 {
+  width: var(--width-40);
+}
+
+.g--width-50 {
+  width: var(--width-50);
+}
+
+.g--width-60 {
+  width: var(--width-60);
+}
+
+.g--width-70 {
+  width: var(--width-70);
+}
+
+.g--width-80 {
+  width: var(--width-80);
+}
+
+.g--width-90 {
+  width: var(--width-90);
+}
+
+.g--width-100 {
+  width: var(--width-100);
 }
 
 .g--z-index-1 {

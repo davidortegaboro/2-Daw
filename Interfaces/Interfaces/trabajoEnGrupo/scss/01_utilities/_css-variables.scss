@@ -32,6 +32,14 @@
         --padding-#{$name}: #{$value}px;
     }
 
+    @each $name, $value in $widths {
+        --width-#{$name}: #{$value}px;
+    }
+
+    @each $value in $widths-perc {
+        --width-#{$value}: #{$value + '%'};
+    }
+
     @each $z in $index {
         --z-index-#{$z}: #{$z};
     }

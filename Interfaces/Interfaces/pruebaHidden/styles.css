@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.l-panel{
+    width: ;
+}
+
+.c-panel {
+    display: inline-block;
+    background-color: whitesmoke;
+    width: 600px;
+    height: 300px;
+}

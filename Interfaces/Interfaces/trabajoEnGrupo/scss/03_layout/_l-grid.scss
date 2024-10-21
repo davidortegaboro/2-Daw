@@ -14,6 +14,10 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
+    &--cols-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
     &--cols-auto {
         grid-template-columns: auto;
     }
@@ -49,60 +53,60 @@
 
     // Justificación de contenido en el eje principal (horizontal)
     &--justify-start {
-        justify-content: start;
+        justify-items: start;
     }
 
     &--justify-center {
-        justify-content: center;
+        justify-items: center;
     }
 
     &--justify-end {
-        justify-content: end;
+        justify-items: end;
     }
 
     &--justify-stretch {
-        justify-content: stretch;
+        justify-items: stretch;
     }
 
     &--justify-space-between {
-        justify-content: space-between;
+        justify-items: space-between;
     }
 
     &--justify-space-around {
-        justify-content: space-around;
+        justify-items: space-around;
     }
 
     &--justify-space-evenly {
-        justify-content: space-evenly;
+        justify-items: space-evenly;
     }
 
     // Alineación de contenido en el eje transversal (vertical)
     &--align-start {
-        align-content: start;
+        align-items: start;
     }
 
     &--align-center {
-        align-content: center;
+        align-items: center;
     }
 
     &--align-end {
-        align-content: end;
+        align-items: end;
     }
 
     &--align-stretch {
-        align-content: stretch;
+        align-items: stretch;
     }
 
     &--align-space-between {
-        align-content: space-between;
+        align-items: space-between;
     }
 
     &--align-space-around {
-        align-content: space-around;
+        align-items: space-around;
     }
 
     &--align-space-evenly {
-        align-content: space-evenly;
+        align-items: space-evenly;
     }
 
     // Posicionamiento de elementos individuales dentro del grid
@@ -143,7 +147,7 @@
     &--areas {
         grid-template-areas:
             "header header"
-            "sidebar content"
+            "sidebar items"
             "footer footer";
     }
 
