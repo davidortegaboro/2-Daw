@@ -27,12 +27,12 @@ public class BookUserServiceImpl implements BookUserService {
 
     @Override
     public List<Book> getAll(int page, int size) {
-        return null;
+        return bookUserRepository.getAll(page, size);
     }
 
     @Override
     public int count() {
-        return 0;
+        return bookUserRepository.count();
     }
 
     @Override

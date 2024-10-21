@@ -29,12 +29,12 @@ public class BookAdminServiceImpl implements BookAdminService {
 
     @Override
     public List<Book> getAll(int page, int size) {
-        return null;
+        return bookAdminRepository.getAll(page, size);
     }
 
     @Override
     public int count() {
-        return 0;
+        return bookAdminRepository.count();
     }
 
     @Override

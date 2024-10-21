@@ -27,12 +27,12 @@ public class BookUserRepositoryImpl implements BookUserRepository {
 
     @Override
     public List<Book> getAll(int page, int size) {
-        return null;
+        return bookUserDao.getAll(page, size);
     }
 
     @Override
     public int count() {
-        return 0;
+        return bookUserDao.count();
     }
 
     @Override

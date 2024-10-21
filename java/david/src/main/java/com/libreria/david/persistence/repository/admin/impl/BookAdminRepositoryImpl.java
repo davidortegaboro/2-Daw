@@ -28,12 +28,12 @@ public class BookAdminRepositoryImpl implements BookAdminRepository {
 
     @Override
     public List<Book> getAll(int page, int size) {
-        return null;
+        return bookAdminDao.getAll(page, size);
     }
 
     @Override
     public int count() {
-        return 0;
+        return bookAdminDao.count();
     }
 
     @Override

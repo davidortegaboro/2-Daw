@@ -29,12 +29,16 @@ public class BookAdminDaoImpl implements BookAdminDao {
 
     @Override
     public List<Book> getAll(int page, int size) {
-        return null;
+        String sql = "select * from books LIMIT ? OFFSET ?";
+        return jdbcTemplate.query(sql, new BookAdminRowMapper());
     }
 
     @Override
     public int count() {
-        return 0;
+        String sql = """
+                        SELECT COUNT(*) FROM books
+                     """;
+        return jdbcTemplate.queryForObject(sql, Integer.class);
     }
 
     @Override
